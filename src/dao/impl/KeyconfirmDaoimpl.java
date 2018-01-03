@@ -47,18 +47,48 @@ public class KeyconfirmDaoimpl extends HibernateDaoSupport implements Keyconfirm
     public Keyconfirm findRecordByKey(String Key) {
         String hql = "from Keyconfirm where keyId = ? ";
         List<Keyconfirm> list = (List<Keyconfirm>) this.getHibernateTemplate().find(hql,Key);
-        return null;
+        if(list.size()>0){
+            return list.get(0);
+        }else {
+            return null;
+        }
     }
 
     @Override
     public Keyconfirm findRecordByKeyAndHdd(String Key, String HddId) {
         String hql = "from Keyconfirm where keyId = ? and hddId = ? ";
         List<Keyconfirm> list = (List<Keyconfirm>) this.getHibernateTemplate().find(hql,Key,HddId);
-        return null;
+        if(list.size()>0){
+            return list.get(0);
+        }else {
+            return null;
+        }
     }
 
     @Override
-    public boolean doUpdate(Keyconfirm keyInfo) {
+    public boolean isKeyInfoExist(String Key) {
+        String hql = "from Keyconfirm where keyId = ? ";
+        List<Keyconfirm> list = (List<Keyconfirm>) this.getHibernateTemplate().find(hql,Key);
+        if(list.size() == 0){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    @Override
+    public boolean isKeyInfoExist(String Key, String HddId) {
+        String hql = "from Keyconfirm where keyId = ? and hddId = ? ";
+        List<Keyconfirm> list = (List<Keyconfirm>) this.getHibernateTemplate().find(hql,Key,HddId);
+        if(list.size() == 0){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    @Override
+    public boolean update(Keyconfirm keyInfo) {
         sessionFactory =  this.getSessionFactory();
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
@@ -73,7 +103,7 @@ public class KeyconfirmDaoimpl extends HibernateDaoSupport implements Keyconfirm
     }
 
     @Override
-    public boolean doInsert(Keyconfirm keyInfo) {
+    public boolean insert(Keyconfirm keyInfo) {
         sessionFactory = this.getSessionFactory();
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();
@@ -88,7 +118,7 @@ public class KeyconfirmDaoimpl extends HibernateDaoSupport implements Keyconfirm
     }
 
     @Override
-    public boolean doDelete(Keyconfirm keyInfo) {
+    public boolean delete(Keyconfirm keyInfo) {
         sessionFactory = this.getSessionFactory();
         Session s = sessionFactory.openSession();
         Transaction tx = s.beginTransaction();

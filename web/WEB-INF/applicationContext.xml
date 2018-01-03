@@ -23,14 +23,14 @@
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
             </props>
         </property>
-        <property name="mappingLocations">
-            <list>
-                <value>classpath:entity/Keyconfirm.hbm.xml</value>
-            </list>
-        </property>
         <property name="annotatedClasses">
             <list>
                 <value>entity.Keyconfirm</value>
+            </list>
+        </property>
+        <property name="mappingLocations">
+            <list>
+                <value>classpath:entity/Keyconfirm.hbm.xml</value>
             </list>
         </property>
     </bean>

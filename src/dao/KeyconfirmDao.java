@@ -20,8 +20,11 @@ public interface KeyconfirmDao {
     Keyconfirm findRecordByKey(String Key);
     Keyconfirm findRecordByKeyAndHdd(String Key ,String HddId);
 
-    boolean doUpdate(Keyconfirm keyInfo);
-    boolean doInsert(Keyconfirm keyInfo);
-    boolean doDelete(Keyconfirm keyInfo);
+    boolean isKeyInfoExist(String Key);
+    boolean isKeyInfoExist(String Key ,String HddId);
+
+    boolean update(Keyconfirm keyInfo);
+    boolean insert(Keyconfirm keyInfo);
+    boolean delete(Keyconfirm keyInfo);
 
 }

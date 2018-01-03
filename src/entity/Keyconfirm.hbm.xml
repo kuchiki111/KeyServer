@@ -12,7 +12,7 @@
             <column name="key_Id" sql-type="varchar(30)" length="30"/>
         </property>
         <property name="hddId">
-            <column name="hdd_Id" sql-type="int(50)"/>
+            <column name="hdd_Id" sql-type="varchar(50)" length="50"/>
         </property>
         <property name="addDate">
             <column name="add_Date" sql-type="datetime" not-null="true"/>

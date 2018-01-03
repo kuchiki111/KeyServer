@@ -10,14 +10,14 @@ import java.util.Objects;
 /**
  * Created by IntelliJ IDEA.
  * User: kuchi
- * Date: 2018/1/2
- * Time: 10:30
+ * Date: 2018/1/3
+ * Time: 15:03
  */
 @Entity
 public class Keyconfirm {
     private int id;
     private String keyId;
-    private int hddId;
+    private String hddId;
     private Timestamp addDate;
 
     @Id
@@ -41,12 +41,12 @@ public class Keyconfirm {
     }
 
     @Basic
-    @Column(name = "hdd_Id", nullable = false)
-    public int getHddId() {
+    @Column(name = "hdd_Id", nullable = false, length = 50)
+    public String getHddId() {
         return hddId;
     }
 
-    public void setHddId(int hddId) {
+    public void setHddId(String hddId) {
         this.hddId = hddId;
     }
 
@@ -66,8 +66,8 @@ public class Keyconfirm {
         if (o == null || getClass() != o.getClass()) return false;
         Keyconfirm that = (Keyconfirm) o;
         return id == that.id &&
-                hddId == that.hddId &&
                 Objects.equals(keyId, that.keyId) &&
+                Objects.equals(hddId, that.hddId) &&
                 Objects.equals(addDate, that.addDate);
     }
 

@@ -936,7 +936,7 @@
     </column>
     <column id="235" parent="232" name="hdd_Id">
       <Position>3</Position>
-      <DataType>int(50)|0</DataType>
+      <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
