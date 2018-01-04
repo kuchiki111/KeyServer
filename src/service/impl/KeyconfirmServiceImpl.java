@@ -58,16 +58,15 @@ public class KeyconfirmServiceImpl implements KeyconfirmService {
         Keyconfirm keyInfo = new Keyconfirm();
         Date date = new Date();
         Timestamp timestamp = new Timestamp(date.getTime());
+        boolean result ;
 
         keyInfo.setKeyId(Key);
         keyInfo.setHddId(HddId);
         keyInfo.setAddDate(timestamp);
 
-        if (keyconfirmDao.insert(keyInfo)){
-            return true;
-        }else {
-            return false;
-        }
+        result = doInsert(keyInfo);
+        return result;
+
     }
 
     @Override
