@@ -35,4 +35,14 @@
         </property>
     </bean>
 
+    <bean id="KeyconfirmDao" class="dao.impl.KeyconfirmDaoimpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="KeyconfirmService" class="service.impl.KeyconfirmServiceImpl">
+        <property name="keyconfirmDao" ref="KeyconfirmDao"></property>
+    </bean>
+    <bean id="KeyconfirmAction" class="action.KeyconfirmAction">
+        <property name="keyconfirmService" ref="KeyconfirmService"></property>
+    </bean>
+
 </beans>

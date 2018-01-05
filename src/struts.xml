@@ -5,4 +5,20 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
+    <constant name="struts.objectFactory" value="spring"></constant>
+
+    <package name="Keyconfirm" namespace="/" extends="struts-default,json-default">
+        <action name="ReturnRecords" class="action.KeyconfirmAction" method="showKeyInfo">
+            <result name="show" type="json">
+                <param name="root">returnData</param>
+            </result>
+        </action>
+
+        <action name="KeyConfirm" class="action.KeyconfirmAction" method="keyConfirm">
+            <result name="show" type="json">
+                <param name="root">returnData</param>
+            </result>
+        </action>
+    </package>
+
 </struts>
