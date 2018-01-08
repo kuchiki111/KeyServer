@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.objectFactory" value="spring"></constant>
+
+    <package name="Keyconfirm" namespace="/" extends="struts-default,json-default">
+        <action name="ReturnRecords" class="KeyconfirmAction" method="showKeyInfo">
+            <result name="show" type="json">
+                <param name="root">returnData</param>
+            </result>
+        </action>
+
+        <action name="KeyConfirm" class="KeyconfirmAction" method="keyConfirm">
+            <result name="comfirm" type="json">
+                <param name="root">returnData</param>
+            </result>
+        </action>
+
+        <action name="KeyInsert" class="KeyconfirmAction" method="insert">
+            <result name="insert" type="json">
+                <param name="root">returndata</param>
+            </result>
+        </action>
+
+    </package>
+</struts>
