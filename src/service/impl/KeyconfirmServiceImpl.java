@@ -5,6 +5,8 @@ import entity.Keyconfirm;
 import service.KeyconfirmService;
 
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -56,13 +58,14 @@ public class KeyconfirmServiceImpl implements KeyconfirmService {
     @Override
     public boolean Register(String Key ,String HddId) {
         Keyconfirm keyInfo = new Keyconfirm();
-        Date date = new Date();
-        Timestamp timestamp = new Timestamp(date.getTime());
+        Timestamp ts = new Timestamp(System.currentTimeMillis());
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String Date = sdf.format(ts);
         boolean result ;
 
         keyInfo.setKeyId(Key);
         keyInfo.setHddId(HddId);
-        keyInfo.setAddDate(timestamp);
+        keyInfo.setAddDate(Date);
 
         result = doInsert(keyInfo);
         return result;

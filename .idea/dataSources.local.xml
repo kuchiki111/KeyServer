@@ -11,5 +11,15 @@
       <user-name>admin</user-name>
       <introspection-schemas>*:keyserver</introspection-schemas>
     </data-source>
+    <data-source name="sagacloud@sql.l209.vhostgo.com" uuid="c6a5cfc4-e9ce-4979-ac2a-075e586eefcb">
+      <database-info product="MySQL" version="5.6.22" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sagacloud</user-name>
+      <introspection-schemas>*:sagacloud</introspection-schemas>
+    </data-source>
   </component>
 </project>

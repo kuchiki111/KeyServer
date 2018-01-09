@@ -942,7 +942,7 @@
     </column>
     <column id="236" parent="232" name="add_Date">
       <Position>4</Position>
-      <DataType>datetime|0</DataType>
+      <DataType>varchar(30)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="237" parent="232" name="PRIMARY">

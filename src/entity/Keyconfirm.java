@@ -18,7 +18,8 @@ public class Keyconfirm {
     private int id;
     private String keyId;
     private String hddId;
-    private Timestamp addDate;
+    private String addDate;
+
 
     @Id
     @Column(name = "Id", nullable = false)
@@ -51,12 +52,12 @@ public class Keyconfirm {
     }
 
     @Basic
-    @Column(name = "add_Date", nullable = true)
-    public Timestamp getAddDate() {
+    @Column(name = "add_Date", nullable = true, length = 30)
+    public String getAddDate() {
         return addDate;
     }
 
-    public void setAddDate(Timestamp addDate) {
+    public void setAddDate(String addDate) {
         this.addDate = addDate;
     }
 

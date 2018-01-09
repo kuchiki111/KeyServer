@@ -6,9 +6,9 @@
     <!-- data connection -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/keyserver"></property>
-        <property name="username" value="admin"/>
-        <property name="password" value="admin123456"/>
+        <property name="url" value="jdbc:mysql://sql.l209.vhostgo.com:3306/sagacloud"></property>
+        <property name="username" value="sagacloud"/>
+        <property name="password" value="sc33383337"/>
     </bean>
 
 
@@ -19,7 +19,7 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/keyserver</prop>
+                <prop key="hibernate.connection.url">jdbc:mysql://sql.l209.vhostgo.com:3306/sagacloud</prop>
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
             </props>
         </property>

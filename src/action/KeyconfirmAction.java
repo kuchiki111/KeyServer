@@ -107,5 +107,4 @@ public class KeyconfirmAction extends ActionSupport implements ModelDriven<Keyco
         returnData = JSONArray.parseArray(JSON.toJSONString(list));
         return "update";
     }
-
 }
