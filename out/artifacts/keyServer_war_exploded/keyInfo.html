@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keyInfo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-table/src/bootstrap-table.css">
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap-table/src/bootstrap-table.js"></script>
+    <script src="assets/bootstrap-table/src/locale/bootstrap-table-zh-CN.js"></script>
+    <script src="assets/ga.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Key Information</h1>
+        <table id="table"
+               data-toggle="table"
+               data-url="http://localhost:8080/keyServer/ReturnRecords"
+               data-striped="true"
+               data-pagination="true"
+               data-page-size="5"
+               data-page-list="[5,10,25,50]"
+               data-search="true"
+               data-show-refresh="true"
+               data-sort-name="id"
+               data-sort-order="asc">
+            <thead>
+            <tr>
+                <th data-checkbox="true"></th>
+                <th data-field="id" data-sortable="true">Id</th>
+                <th data-field="keyId" data-sortable="true">密钥</th>
+                <th data-field="hddId" data-sortable="true">序列号</th>
+                <th data-field="addDate" data-sortable="true">添加时间</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>
