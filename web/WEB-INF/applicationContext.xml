@@ -26,16 +26,18 @@
         <property name="mappingLocations">
             <list>
                 <value>classpath:entity/Keyconfirm.hbm.xml</value>
+                <value>classpath:entity/User.hbm.xml</value>
             </list>
         </property>
         <property name="annotatedClasses">
             <list>
                 <value>entity.Keyconfirm</value>
+                <value>entity.User</value>
             </list>
         </property>
     </bean>
 
-    <bean id="KeyconfirmDao" class="dao.impl.KeyconfirmDaoimpl">
+    <bean id="KeyconfirmDao" class="dao.impl.KeyconfirmDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
     <bean id="KeyconfirmService" class="service.impl.KeyconfirmServiceImpl">

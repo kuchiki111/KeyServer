@@ -1,13 +1,12 @@
 package service.impl;
 
-import dao.impl.KeyconfirmDaoimpl;
+import dao.impl.KeyconfirmDaoImpl;
 import entity.Keyconfirm;
 import service.KeyconfirmService;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,13 +16,13 @@ import java.util.List;
  * Time: 15:55
  */
 public class KeyconfirmServiceImpl implements KeyconfirmService {
-    private KeyconfirmDaoimpl keyconfirmDao;
+    private KeyconfirmDaoImpl keyconfirmDao;
 
-    public void setKeyconfirmDao(KeyconfirmDaoimpl keyconfirmDao){
+    public void setKeyconfirmDao(KeyconfirmDaoImpl keyconfirmDao){
         this.keyconfirmDao = keyconfirmDao;
     }
 
-    public KeyconfirmDaoimpl getKeyconfirmDao() {
+    public KeyconfirmDaoImpl getKeyconfirmDao() {
         return keyconfirmDao;
     }
 

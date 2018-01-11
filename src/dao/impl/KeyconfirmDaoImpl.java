@@ -17,7 +17,7 @@ import java.util.List;
  * Date: 2018/1/2
  * Time: 13:54
  */
-public class KeyconfirmDaoimpl extends HibernateDaoSupport implements KeyconfirmDao {
+public class KeyconfirmDaoImpl extends HibernateDaoSupport implements KeyconfirmDao {
     @Qualifier("sessionFactory")
     @Autowired
     private SessionFactory sessionFactory;
