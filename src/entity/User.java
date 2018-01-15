@@ -9,8 +9,8 @@ import java.util.Objects;
 /**
  * Created by IntelliJ IDEA.
  * User: kuchi
- * Date: 2018/1/11
- * Time: 13:59
+ * Date: 2018/1/12
+ * Time: 10:25
  */
 @Entity
 public class User {
@@ -39,7 +39,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "password", nullable = false, length = 25)
+    @Column(name = "password", nullable = false, length = 32)
     public String getPassword() {
         return password;
     }

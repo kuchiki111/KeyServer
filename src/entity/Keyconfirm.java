@@ -4,14 +4,13 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.sql.Timestamp;
 import java.util.Objects;
 
 /**
  * Created by IntelliJ IDEA.
  * User: kuchi
- * Date: 2018/1/8
- * Time: 15:13
+ * Date: 2018/1/12
+ * Time: 10:25
  */
 @Entity
 public class Keyconfirm {
@@ -19,7 +18,6 @@ public class Keyconfirm {
     private String keyId;
     private String hddId;
     private String addDate;
-
 
     @Id
     @Column(name = "Id", nullable = false)

@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="entity.Keyconfirm" table="keyconfirm" schema="keyserver">
+    <class name="entity.Keyconfirm" table="keyconfirm" schema="sagacloud">
         <id name="id">
             <column name="Id" sql-type="int(11)"/>
         </id>
