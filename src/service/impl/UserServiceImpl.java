@@ -47,12 +47,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean Login(String UserName, String Password) {
-        return false;
+        return userDao.isUserInfoExist(UserName,Password);
     }
 
     @Override
     public boolean Register(String UserName, String Password) {
-        return false;
+        User userInfo = null;
+        userInfo.setUsername(UserName);
+        userInfo.setPassword(Password);
+        return doInsert(userInfo);
     }
 
     @Override
