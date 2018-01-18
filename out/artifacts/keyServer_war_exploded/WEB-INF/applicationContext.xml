@@ -47,4 +47,14 @@
         <property name="keyconfirmService" ref="KeyconfirmService"></property>
     </bean>
 
+    <bean id="UserDao" class="dao.impl.UserDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="UserService" class="service.impl.UserServiceImpl">
+        <property name="userDao" ref="UserDao"></property>
+    </bean>
+    <bean id="UserAction" class="action.UserAction">
+        <property name="userService" ref="UserService"></property>
+    </bean>
+
 </beans>

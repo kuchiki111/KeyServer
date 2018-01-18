@@ -22,8 +22,24 @@
 
         <action name="KeyInsert" class="KeyconfirmAction" method="insert">
             <result name="insert" type="json">
+                <param name="root">returnData</param>
+            </result>
+        </action>
+
+    </package>
+
+    <package name="User" namespace="/" extends="struts-default,json-default">
+        <action name="ReturnUsers" class="UserAction" method="showRecords">
+            <result name="show" type="json">
                 <param name="root">returndata</param>
             </result>
+        </action>
+
+        <action name="Login" class="UserAction" method="Login">
+            <result name="result" type="json">
+                <param name="root">data</param>
+            </result>
+            <result name="success">/index.html</result>
         </action>
 
     </package>
