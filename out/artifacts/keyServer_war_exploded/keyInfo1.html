@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>keyInfo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-table.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-table.js"></script>
+    <script src="assets/js/bootstrap-table-locale/bootstrap-table-zh-CN.js"></script>
+    <script src="assets/js/ga.js"></script>
+</head>
+<!--data-url="http://sagacloud.gotoip4.com/keyServer/ReturnRecords"-->
+<body>
+    <div class="container">
+        <h1>Key Information</h1>
+        <table id="table"
+               data-toggle="table"
+               data-url="http://sagacloud.gotoip4.com/keyServer/ReturnRecords"
+               data-striped="true"
+               data-pagination="true"
+               data-page-size="5"
+               data-page-list="[5,10,25,50]"
+               data-search="true"
+               data-show-refresh="true"
+               data-sort-name="id"
+               data-sort-order="asc">
+            <thead>
+            <tr>
+                <th data-checkbox="true"></th>
+                <th data-field="id" data-sortable="true">Id</th>
+                <th data-field="keyId" data-sortable="true">密钥</th>
+                <th data-field="hddId" data-sortable="true">序列号</th>
+                <th data-field="addDate" data-sortable="true">添加时间</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+</html>

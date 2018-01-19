@@ -69,14 +69,16 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
         Map result = new HashMap();
         if (userService.Login(user.getUsername(),user.getPassword())){
             Map<String,Object> session = ActionContext.getContext().getSession();
-//            session.put("username",user.getUsername());
-//            result.put("result","success");
-            return "success";
+            session.put("username",user.getUsername());
+            result.put("result","success");
+//            return "success";
         }else {
             result.put("result","error");
-            data = JSONObject.parseObject(JSON.toJSONString(result));
-            return "result";
-        }
 
+        }
+        data = JSONObject.parseObject(JSON.toJSONString(result));
+        return "result";
     }
+
+
 }

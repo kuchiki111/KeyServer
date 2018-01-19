@@ -39,7 +39,10 @@
             <result name="result" type="json">
                 <param name="root">data</param>
             </result>
-            <result name="success">/index.html</result>
+        </action>
+
+        <action name="Logout" class="UserAction" method="Logout">
+            <result name="logout"></result>
         </action>
 
     </package>
