@@ -918,31 +918,41 @@
       <DataType>varchar(30)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="229" parent="223" name="PRIMARY">
+    <column id="229" parent="223" name="last_Date">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="230" parent="223" name="add_IP">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="231" parent="223" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="230" parent="224" name="Id">
+    <column id="232" parent="224" name="Id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="224" name="username">
+    <column id="233" parent="224" name="username">
       <Position>2</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="224" name="password">
+    <column id="234" parent="224" name="password">
       <Position>3</Position>
       <DataType>varchar(32)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="233" parent="224" name="PRIMARY">
+    <key id="235" parent="224" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Id</ColNames>
       <Primary>1</Primary>

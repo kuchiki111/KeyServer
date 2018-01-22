@@ -9,8 +9,8 @@ import java.util.Objects;
 /**
  * Created by IntelliJ IDEA.
  * User: kuchi
- * Date: 2018/1/12
- * Time: 10:25
+ * Date: 2018/1/22
+ * Time: 13:05
  */
 @Entity
 public class Keyconfirm {
@@ -18,6 +18,8 @@ public class Keyconfirm {
     private String keyId;
     private String hddId;
     private String addDate;
+    private String lastDate;
+    private String addIp;
 
     @Id
     @Column(name = "Id", nullable = false)
@@ -59,6 +61,26 @@ public class Keyconfirm {
         this.addDate = addDate;
     }
 
+    @Basic
+    @Column(name = "last_Date", nullable = true, length = 30)
+    public String getLastDate() {
+        return lastDate;
+    }
+
+    public void setLastDate(String lastDate) {
+        this.lastDate = lastDate;
+    }
+
+    @Basic
+    @Column(name = "add_IP", nullable = true, length = 20)
+    public String getAddIp() {
+        return addIp;
+    }
+
+    public void setAddIp(String addIp) {
+        this.addIp = addIp;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,12 +89,14 @@ public class Keyconfirm {
         return id == that.id &&
                 Objects.equals(keyId, that.keyId) &&
                 Objects.equals(hddId, that.hddId) &&
-                Objects.equals(addDate, that.addDate);
+                Objects.equals(addDate, that.addDate) &&
+                Objects.equals(lastDate, that.lastDate) &&
+                Objects.equals(addIp, that.addIp);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, keyId, hddId, addDate);
+        return Objects.hash(id, keyId, hddId, addDate, lastDate, addIp);
     }
 }

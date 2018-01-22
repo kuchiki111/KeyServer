@@ -65,6 +65,7 @@ public class KeyconfirmAction extends ActionSupport implements ModelDriven<Keyco
         //keyId是否存在数据库
         if (keyconfirmService.isKeyExist(keyInfo.getKeyId())){
             if (keyconfirmService.Login(keyInfo.getKeyId(),keyInfo.getHddId())){
+                keyconfirmService.updateLastDate(keyInfo.getKeyId(),keyInfo.getHddId());
                 list.add("2");//keyId和HddId与数据库中相同，允许激活
             }else {
                 list.add("3");//keyId和HddId与数据库中不同，拒绝激活

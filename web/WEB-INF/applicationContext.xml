@@ -27,6 +27,7 @@
             <list>
                 <value>classpath:entity/Keyconfirm.hbm.xml</value>
                 <value>classpath:entity/User.hbm.xml</value>
+                <value>classpath:entity/Keyconfirm.hbm.xml</value>
             </list>
         </property>
         <property name="annotatedClasses">

@@ -17,5 +17,11 @@
         <property name="addDate">
             <column name="add_Date" sql-type="varchar(30)" length="30" not-null="true"/>
         </property>
+        <property name="lastDate">
+            <column name="last_Date" sql-type="varchar(30)" length="30" not-null="true"/>
+        </property>
+        <property name="addIp">
+            <column name="add_IP" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

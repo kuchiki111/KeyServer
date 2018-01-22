@@ -16,6 +16,8 @@ public interface KeyconfirmService {
     List<Keyconfirm> showRecords();
     Keyconfirm findRecordById(long id);
 
+    boolean updateLastDate(String Key, String HddId);
+
     boolean isKeyExist(String Key);
     boolean Login(String Key, String HddId);
     boolean Register(String Key, String HddId);

@@ -46,6 +46,20 @@ public class KeyconfirmServiceImpl implements KeyconfirmService {
     }
 
     @Override
+    public boolean updateLastDate(String Key, String HddId) {
+        boolean result;
+        Timestamp ts = new Timestamp(System.currentTimeMillis());
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String Date = sdf.format(ts);
+
+        Keyconfirm keyInfo = keyconfirmDao.findRecordByKeyAndHdd(Key,HddId);
+        keyInfo.setLastDate(Date);
+
+        result = doUpdate(keyInfo);
+        return result;
+    }
+
+    @Override
     public boolean isKeyExist(String Key) {
         return keyconfirmDao.isKeyInfoExist(Key);
     }
