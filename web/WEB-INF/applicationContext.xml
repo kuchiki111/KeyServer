@@ -34,6 +34,7 @@
             <list>
                 <value>entity.Keyconfirm</value>
                 <value>entity.User</value>
+                <value>entity.KeyinfoEntity</value>
             </list>
         </property>
     </bean>
