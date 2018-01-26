@@ -5,6 +5,7 @@ import java.util.List;
 
 public interface KeyinfoDao {
     List<KeyInfo> showRecords();
+    int Count();
 
     KeyInfo findRecordsById(long id);
     KeyInfo findRecordsByKey(String Key);

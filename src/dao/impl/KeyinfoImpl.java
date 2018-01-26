@@ -1,12 +1,18 @@
 package dao.impl;
 
 import dao.KeyinfoDao;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 
 import javax.xml.crypto.dsig.keyinfo.KeyInfo;
 import java.util.List;
 
 public class KeyinfoImpl  extends HibernateDaoSupport implements KeyinfoDao {
+    @Qualifier("sessionFactory")
+    @Autowired
+    private SessionFactory sessionFactory;
     @Override
     public List<KeyInfo> showRecords() {
         String hql = "from Keyconfirm";
