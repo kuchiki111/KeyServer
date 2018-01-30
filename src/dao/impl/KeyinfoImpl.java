@@ -15,9 +15,20 @@ public class KeyinfoImpl  extends HibernateDaoSupport implements KeyinfoDao {
     private SessionFactory sessionFactory;
     @Override
     public List<KeyInfo> showRecords() {
-        String hql = "from Keyconfirm";
+        String hql = "from KeyinfoEntity";
         List<KeyInfo> list = (List<KeyInfo>) this.getHibernateTemplate().find(hql);
         return list;
+    }
+
+    @Override
+    public int Count() {
+        int count = 0;
+        String hql = "select count(*) from KeyinfoEntity ";
+        List<Long> list = (List<Long>) this.getHibernateTemplate().find(hql);
+        if (list.size() > 0){
+            count = list.get(0).intValue();
+        }
+        return count;
     }
 
     @Override
